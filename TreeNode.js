@@ -1,7 +1,7 @@
 // TREE DATA STRUCTURE: JAVASCRIPT
 
 // Introduction
-// Trees are wonderful data structures that can model real life hierarchical information,
+// Trees are a data structure that can model real life hierarchical information,
 // including: 
 // organizational charts,
 // genealogical trees,
@@ -14,7 +14,7 @@
 
 // Data
 // A list of children, where each child is itself a tree node
-// We can add data to and remove data from a tree and traverse it in two different ways:
+// add data to and remove data from a tree and traverse it in two different ways:
 
 // Depth-first, or
 // Breadth-first.
@@ -31,7 +31,7 @@ class TreeNode {
         // If child is an instance of TreeNode. If it is, add child to the end of the children array.
         if (child instanceof TreeNode) {
             this.children.push(child);
-            // Else, create a TreeNode instance for it before adding it to the children array.
+            // Else, create a TreeNode instance before adding it to the children array.
         } else {
             this.children.push(new TreeNode(child));
         }
@@ -54,7 +54,7 @@ class TreeNode {
         // If target child is not found in the children array
         if (length === this.children.length) {
             // Recursively call .removeChild() for each grandchild.
-            this.children.forEach(child => child.removeChild(childToRemove));
+            this.children.forEach((grandChild) => grandChild.removeChild(childToRemove));
         }
     }
     // Pretty Print/Print method:
@@ -83,7 +83,7 @@ class TreeNode {
         // Assign an array to contain the current root node
         let queue = [this];
         // While the array is not empty
-        while (queue.length) {
+        while (queue.length > 0) {
             // Extract the first tree node from the array
             const current = queue.shift();
             // Display tree node's data

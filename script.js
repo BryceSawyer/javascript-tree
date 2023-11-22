@@ -37,34 +37,33 @@ tree.addChild('folder0');
 tree.addChild('folder1');
 tree.addChild('folder2');
 tree.addChild('folder3');
+tree.print();
+console.log();
 
 tree.children[0].addChild('file');
 tree.children[0].children[0].addChild('txt');
+tree.print();
+console.log();
 
 tree.children[1].addChild('file');
 tree.children[1].children[0].addChild('txt')
+tree.print();
+console.log();
 
 tree.removeChild('folder3');
+tree.print();
+console.log();
 
-tree.children[2].addChild('file');
-tree.children[2].children[0].addChild(1)
-tree.children[2].children[0].addChild(2)
-tree.children[2].children[0].addChild(3)
-tree.children[2].addChild('file');
+tree.children[2].addChild('file1');
+tree.children[2].children[0].addChild('a')
+tree.children[2].children[0].addChild('b')
+tree.children[2].children[0].addChild('c')
+tree.children[2].addChild('file2');
 tree.children[2].children[1].addChild(1)
 tree.children[2].children[1].children[0].addChild(2)
 tree.children[2].children[1].children[0].children[0].addChild(3)
-tree.children[2].addChild('file');
-
+tree.children[2].addChild('file3');
+tree.removeChild('file3');
 tree.print();
-//tree.depthFirstTraversal();
-//tree.breadthFirstTraversal();
-
-
-
-
-
-
-
-
-
+// tree.depthFirstTraversal();
+// tree.breadthFirstTraversal();
